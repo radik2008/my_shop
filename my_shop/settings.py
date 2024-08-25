@@ -28,7 +28,7 @@ DEBUG = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = ['diplomgb.pythonanywhere.com',]
+ALLOWED_HOSTS = ['diplomshop.pythonanywhere.com',]
 
 # Application definition
 
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'my_shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'diplomgb$default',
-        'USER': 'diplomgb',
+        'NAME': 'diplomshop$default',
+        'USER': 'diplomshop',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'diplomgb.mysql.pythonanywhere-services.com',
+        'HOST': 'diplomshop.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode = 'STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
@@ -127,10 +127,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = BASE_DIR / 'static'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
