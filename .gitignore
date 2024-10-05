@@ -1,5 +1,15 @@
 /.venv/
-*.sqlite3
 *.log
 *.pyc
-*.idea
+
+# python stuff
+venv/
+.pylintrc
+__pycache__/
+
+# ide stuff
+.idea
+.vscode
+
+# django stuff
+db.sqlite3
